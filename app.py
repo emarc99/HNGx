@@ -7,7 +7,7 @@ app = Flask(__name__)
 def get_info():
     # Get query parameters
     slack_name = request.args.get('slack_name', 'emarc')
-    track = request.args.get('track', 'Backend')
+    track = request.args.get('track', 'backend')
 
     # Get current day of the week
     now = datetime.utcnow()
@@ -26,8 +26,8 @@ def get_info():
             return jsonify({'error': 'Date range is out of valid time range'}), 400
 
     # Define GitHub URLs
-    github_file_url = "https://github.com/username/repo/blob/main/file_name.ext"
-    github_repo_url = "https://github.com/username/repo"
+    github_file_url = "https://github.com/emarc99/HNGx/blob/main/app.py"
+    github_repo_url = "https://github.com/emarc99"
 
     # Prepare the response JSON
     response = {
