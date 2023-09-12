@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/info', methods=['GET'])
 def get_info():
     # Get query parameters
-    slack_name = request.args.get('slack_name', 'Aroso')
+    slack_name = request.args.get('slack_name', 'emarc')
     track = request.args.get('track', 'Backend')
 
     # Get current day of the week
